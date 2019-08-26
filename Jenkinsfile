@@ -18,7 +18,7 @@ node {
 
        stage('push image'){
        
-        docker.withRegistry('https://cloud.docker.com/repository/registry-1.docker.io/nileshrk23787/angulardocker','nilesh235'){
+        docker.withRegistry('https://cloud.docker.com/repository/registry-1.docker.io/nileshrk23787/angulardocker','dockerhub'){
 	app.push(":$BUILD_NUMBER")
 	 }
 	}
