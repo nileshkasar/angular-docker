@@ -14,9 +14,9 @@ node {
   
 	  stage('push image'){
        
-        docker.withRegistry('https://cloud.docker.com/repository/registry-1.docker.io/nileshrk23787/angulardocker','dockerhub'){
+     sh 'docker login --username nileshrk23787 --password nilesh235'
 	 def app = docker.build("nileshrk23787/angulardocker:1")
 	 app.push()
-	 }
+	 
       }
 }
