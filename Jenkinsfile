@@ -16,12 +16,12 @@ node {
       stage('building image'){
 
        app = docker.build("nileshrk23787/angulardocker")
-	}
+      }
 
-       stage('push image'){
+      stage('push image'){
        
         docker.withRegistry('https://cloud.docker.com/repository/registry-1.docker.io/nileshrk23787/angulardocker','dockerhub'){
 	app.push(":$BUILD_NUMBER")
 	 }
-	}
+      }
 }
