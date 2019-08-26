@@ -7,10 +7,10 @@ node {
 	}
     
       stage('build image'){
-         steps{
+         
           sh 'npm install'
           sh 'npm run ng build'
-	}
+	
       }
 
       stage('building image'){
