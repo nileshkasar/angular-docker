@@ -15,7 +15,7 @@ node {
 
       stage('building image'){
 
-       app = docker.build("nileshrk23787/angulardocker")
+       sh 'docker build -t nileshrk23787/angulardocker:1 .'
       }
 
       stage('push image'){
